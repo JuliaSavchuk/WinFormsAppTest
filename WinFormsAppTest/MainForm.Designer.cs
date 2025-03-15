@@ -49,6 +49,7 @@
             filleToolStripMenuItem.Name = "filleToolStripMenuItem";
             filleToolStripMenuItem.Size = new Size(50, 24);
             filleToolStripMenuItem.Text = "Fille";
+            filleToolStripMenuItem.Click += filleToolStripMenuItem_Click;
             // 
             // helpToolStripMenuItem
             // 
