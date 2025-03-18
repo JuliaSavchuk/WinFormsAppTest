@@ -30,9 +30,10 @@
         {
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
-            helpToolStripMenuItem = new ToolStripMenuItem();
             exitToolStripMenuItem = new ToolStripMenuItem();
+            helpToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
+            button1 = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -50,15 +51,15 @@
             // 
             fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exitToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new Size(50, 24);
+            fileToolStripMenuItem.Size = new Size(46, 24);
             fileToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(124, 26);
+            exitToolStripMenuItem.Size = new Size(116, 26);
             exitToolStripMenuItem.Text = "Exit";
-            exitToolStripMenuItem.Click += new EventHandler(ExitToolStripMenuItem_Click);
+            exitToolStripMenuItem.Click += ExitToolStripMenuItem_Click;
             // 
             // helpToolStripMenuItem
             // 
@@ -70,15 +71,26 @@
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(124, 26);
+            aboutToolStripMenuItem.Size = new Size(133, 26);
             aboutToolStripMenuItem.Text = "About";
-            aboutToolStripMenuItem.Click += new EventHandler(AboutToolStripMenuItem_Click);
+            aboutToolStripMenuItem.Click += AboutToolStripMenuItem_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(291, 157);
+            button1.Name = "button1";
+            button1.Size = new Size(192, 78);
+            button1.TabIndex = 1;
+            button1.Text = "Add Numbers";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "MainForm";
@@ -109,5 +121,7 @@
             // Окно с информацией о приложении
             MessageBox.Show("This is a sample WinForms application.", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private Button button1;
     }
 }
